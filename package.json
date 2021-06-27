@@ -1,0 +1,16 @@
+{
+  "name": "facemodel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Dhritiraj Borah",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/blazeface": "^0.0.7",
+    "@tensorflow/tfjs": "^3.7.0",
+    "express": "^4.17.1"
+  }
+}
