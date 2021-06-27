@@ -11,12 +11,20 @@
     <style>
         #canvas{
             transform: scaleX(-1);
+            padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+        }
+        h1{
+            text-align: center;
         }
     </style>
     <body>
        <h1>Face Detection Model</h1>
        <video id="video" autoplay style="display: none;"></video>
-       <canvas id="canvas" width="500px" height="400px"></canvas>
+       <canvas id="canvas" width="400px" height="300px"></canvas>
        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
 

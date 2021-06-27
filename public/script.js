@@ -10,7 +10,7 @@ let ctx = canvas.getContext("2d")
 const setUpCamera = () =>{
     navigator.mediaDevices
     .getUserMedia({
-        video : {width:500 , height : 400},
+        video : {width:400 , height : 300},
         audio : false
     })
     .then((stream) => {
@@ -21,7 +21,7 @@ const setUpCamera = () =>{
 const detectFaces = async() =>{
     const prediction = await model.estimateFaces(video,false);
 console.log(prediction)
-ctx.drawImage(video,0,0,500,400)
+ctx.drawImage(video,0,0,400,300)
 prediction.forEach((pred) =>{
     ctx.beginPath();
     ctx.lineWidth ="4";
@@ -45,7 +45,7 @@ prediction.forEach((pred) =>{
 
 setUpCamera();
 video.addEventListener("loadeddata", async() => { 
-    model = await blazeface.load(),
+    model = await blazeface.load()
     // detectFaces()
     setInterval(detectFaces,100)
 });
